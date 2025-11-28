@@ -215,9 +215,70 @@ body {
     gap: 14px;
 }
 
-.songList ul {
+ .songList ul {
     padding: 0 12px;
+    list-style-type: decimal;
+    flex-direction: column;     /* make items vertical */
+    gap: 10px;                  /* spacing between songs */
+    cursor: pointer;
+    padding: 12px 0;
+    
 }
+.songList ul li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border: 1px solid white;
+    margin: 12px 5px;
+    padding: 13px;
+    border-radius: 5px;
+    justify-content: space-between;
+
+}
+.songList .info{
+   font-size: 13px; 
+   width: 344px;
+}
+.playnow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playnow span{
+    font-size: 15px ;
+    width: 64px;
+    padding: 12px;
+}
+.seekbar{
+    height: 2px;
+    width: 100%;
+    background: black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    margin: 10px;
+}
+.circle{
+    width: 13px;
+    height:13px ;
+    border-radius: 13px;
+    background: black;
+    position: relative;
+    bottom: 6px;
+    left: 0%;
+    transition: left 0.5s ;
+    
+}
+.songbuttons img {
+    cursor: pointer;
+}
+.advoebar{
+    display: flex;
+
+}
+
 /* 
 .songList ul li {
     list-style-type: decimal;

@@ -29,18 +29,22 @@
                     <h2>
                         Your Library
                     </h2>
-                    
+
                 </div>
                 <div class="songList">
-                        <ul>
-                           
-                        </ul>
-                    </div>
-
-                <div class="songList">
-
                     <ul>
-
+                        <!-- <li>
+                            <img class="invert" src="music.svg" alt="">
+                            <div class="info">
+                                <div>SongName</div>
+                                <div>SongArtice</div>
+                            </div>
+                            <div class="playnow">
+                                <span>Play Now</span>
+                                <img class="invert" src="play.svg" alt="">
+                            </div>
+                          
+                           </li> -->
                     </ul>
                 </div>
 
@@ -85,30 +89,30 @@
                 <div class="cardContainer">
                     <div class="card">
                         <div class="play">
-                             <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Green circle -->
-                            <circle cx="32" cy="32" r="32" fill="#1DB954" />
+                            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Green circle -->
+                                <circle cx="32" cy="32" r="32" fill="#1DB954" />
 
-                            <!-- Black play icon -->
-                            <polygon points="26,20 26,44 46,32" fill="#000000" />
-                        </svg>
+                                <!-- Black play icon -->
+                                <polygon points="26,20 26,44 46,32" fill="#000000" />
+                            </svg>
                         </div>
                         <img src="https://i.scdn.co/image/ab67616d00001e02b88f823f06c211ce5573a720" alt="">
                         <h2>Rebel saab</h2>
                         <p>Thaman S,Sanjith</p>
-                       
+
 
                     </div>
                     <div class="card">
-                       <div class="play">
-                         <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Green circle -->
-                            <circle cx="32" cy="32" r="32" fill="#1DB954" />
+                        <div class="play">
+                            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Green circle -->
+                                <circle cx="32" cy="32" r="32" fill="#1DB954" />
 
-                            <!-- Black play icon -->
-                            <polygon points="26,20 26,44 46,32" fill="#000000" />
-                        </svg>
-                       </div>
+                                <!-- Black play icon -->
+                                <polygon points="26,20 26,44 46,32" fill="#000000" />
+                            </svg>
+                        </div>
                         </svg>
                         <img src="https://i.scdn.co/image/ab67616d00001e02b88f823f06c211ce5573a720" alt="">
                         <h2>Rebel saab</h2>
@@ -117,12 +121,21 @@
 
                 </div>
                 <div class="playbar">
-                   <div class="songbuttons">
-                    <img src="previous.svg" alt="">
-                    <img src="play.svg" alt="">
-                    <img src="next.svg" alt="">
-                   </div>
+                    <div class="seekbar">
+                        <div class="circle">
 
+                        </div>
+                    </div>
+                    <div class="advoebar">
+                        <div class="soninfo"></div>
+                        <div class="songbuttons">
+                            <img id="previous" src="previous.svg" alt="">
+                            <img id="play" src="play.svg" alt="">
+                            <img id="next" src="next.svg" alt="">
+                        </div>
+                        <div class="songtime"></div>
+
+                    </div>
                 </div>
             </div>
         </div>
