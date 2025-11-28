@@ -37,7 +37,6 @@ const playMusic = (track)=>{
 }
 
 async function main() {
-    let currentSong = new Audio();
 
     let songs = await getSongs()
     console.log(songs)
@@ -60,15 +59,6 @@ async function main() {
                            </li>`;
     }
 
-    // if (songs.length > 0) {
-    //     var audio = new Audio("http://127.0.0.1:3000/songs/" + encodeURIComponent(songs[0]))
-
-    //     audio.addEventListener("loadeddata", () => {
-    //         console.log(audio.duration, audio.currentSrc, audio.currentTime)
-    //     });
-
-    //     // audio.play()
-    // }
     
     // Attach an event listener to each song 
     Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e=>{
@@ -82,9 +72,11 @@ async function main() {
         if (currentSong.paused){
             currentSong.play()
             play.src = " pause.svg"
+            document.querySelector(".songinfo").innerHTML=track;
+            document.querySelector(".songtime").innerHTML="00:00 / 00:00"
         }else{
             currentSong.pause()
-            lay.src = " play.svg"
+            play.src = " play.svg"
         }
     })
 }
