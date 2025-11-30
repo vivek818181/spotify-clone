@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
-:root{
-    --a:0;
+:root {
+    --a: 0;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -103,7 +104,7 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     overflow-y: auto;
-    max-height: 60vh; 
+    max-height: 60vh;
 }
 
 .card {
@@ -114,7 +115,8 @@ body {
     position: relative;
     transition: all .9s;
 }
-.card:hover{
+
+.card:hover {
     background-color: rgb(105, 103, 103);
     cursor: pointer;
     --a: 1;
@@ -130,14 +132,14 @@ body {
 }
 
 .play {
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     bottom: 88px;
     right: 17px;
-   
+
     transition: all 1s ease-out;
 }
 
@@ -215,15 +217,18 @@ body {
     gap: 14px;
 }
 
- .songList ul {
+.songList ul {
     padding: 0 12px;
     list-style-type: decimal;
-    flex-direction: column;     /* make items vertical */
-    gap: 10px;                  /* spacing between songs */
+    flex-direction: column;
+    /* make items vertical */
+    gap: 10px;
+    /* spacing between songs */
     cursor: pointer;
     padding: 12px 0;
-    
+
 }
+
 .songList ul li {
     display: flex;
     gap: 10px;
@@ -237,21 +242,25 @@ body {
     justify-content: space-between;
 
 }
-.songList .info{
-   font-size: 13px; 
-   width: 344px;
+
+.songList .info {
+    font-size: 13px;
+    width: 344px;
 }
-.playnow{
+
+.playnow {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.playnow span{
-    font-size: 15px ;
+
+.playnow span {
+    font-size: 15px;
     width: 64px;
     padding: 12px;
 }
-.seekbar{
+
+.seekbar {
     height: 2px;
     width: 100%;
     background: black;
@@ -260,24 +269,38 @@ body {
     bottom: 0;
     margin: 10px;
 }
-.circle{
+
+.circle {
     width: 13px;
-    height:13px ;
+    height: 13px;
     border-radius: 13px;
     background: black;
     position: relative;
     bottom: 6px;
     left: 0%;
-    transition: left 0.5s ;
-    
+    transition: left 0.5s;
+
 }
+
 .songbuttons img {
     cursor: pointer;
 }
-.advoebar{
-    display: flex;
 
+.songinfo,
+.songtime {
+    color: black;
+    padding: 0px 12px;
 }
+
+.advoebar {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap:320px;
+}
+
+
 
 /* 
 .songList ul li {
@@ -313,9 +336,3 @@ body {
     width: 64px;
     padding: 12px;
 } */
-
-
-
-
-
-

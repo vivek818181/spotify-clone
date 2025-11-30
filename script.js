@@ -1,11 +1,29 @@
 
 console.log("Let write javascript")
 let currentSong = new Audio();
+const play = document.getElementById("play");
+function convertToMinutes(seconds) {
+    // let mins = Math.floor(seconds / 60);
+    // let secs = seconds % 60;
+
+    // // Add leading zero if needed
+    // let m = mins < 10 ? "0" + mins : mins;
+    // let s = secs < 10 ? "0" + secs : secs;
+
+    // return `${m}:${s}`;
+    seconds = Math.floor(seconds); // ensure integer
+
+    let mins = Math.floor(seconds / 60);
+    let secs = seconds % 60;
+
+    return `${mins < 10 ? "0" + mins : mins}:${secs < 10 ? "0" + secs : secs}`;
+}
 
 async function getSongs() {
 
     let a = await fetch("http://127.0.0.1:3000/songs/")
     let response = await a.text();
+    
     console.log(response)
 
     let div = document.createElement("div")
@@ -29,22 +47,28 @@ async function getSongs() {
 
     return songs
 }
-const playMusic = (track)=>{
+const playMusic = (track,pause=true)=>{
     // let audio = new Audio("/songs/" + track)
     currentSong.src = "/songs/" + track;
+    if(!pause){
+        currentSong.play()
+    }
     currentSong.play()
      play.src = " pause.svg"
+     document.querySelector(".songinfo").innerHTML= track
+     document.querySelector(".songtime").innerHTML="00:00/00:00"
 }
 
 async function main() {
 
     let songs = await getSongs()
+    playMusic(songs[0],true)
     console.log(songs)
 
     let SongUL = document.querySelector(".songList ul")
 
     for (const song of songs) {
-        // ✅ FIXED (innerHTM → innerHTML AND using +=)
+        
         SongUL.innerHTML += `<li>
         
                             <img class="invert" src="music.svg" alt="">
@@ -78,6 +102,11 @@ async function main() {
             currentSong.pause()
             play.src = " play.svg"
         }
+    })
+    // listen  for time update event 
+    currentSong.addEventListener("timeupdate", () =>{
+        console.log(currentSong.currentTime,currentSong.duration);
+        document.querySelector(".songtime").innerHTML =`${convertToMinutes(currentSong.currentTime)}/${convertToMinutes(currentSong.duration)}`
     })
 }
 
